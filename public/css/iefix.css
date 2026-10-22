@@ -1,0 +1,14 @@
+/* CSS fixes for IE678 */
+body {height:auto;}
+.inner {
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#c8c8c8')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#c8c8c8');
+}
+input[type=text] {	/* For IE 8 */
+	background:url('../img/misc/bg-input-ie.png') top left no-repeat;
+	border-bottom:solid 1px #ebebeb;
+} /* needs somekind of shadow */
+#tags {border-bottom:solid 1px #ebebeb;}
+.slider .image div img {left:0 !important;}

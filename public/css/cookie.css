@@ -1,0 +1,81 @@
+#cb-holder {
+  background: #FAFAFA;
+  color: #FFF;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  width: 100%; }
+  @media only screen and (max-width: 767px) {
+    #cb-holder {
+      padding: 15px 15px; } }
+  @media only screen and (min-width: 768px) {
+    #cb-holder {
+      padding: 20px 0 25px; } }
+  #cb-holder #cb-container {
+    margin: 0 auto;
+    overflow: hidden; }
+    @media only screen and (max-width: 767px) {
+      #cb-holder #cb-container {
+        width: 100%; } }
+    @media only screen and (min-width: 768px) {
+      #cb-holder #cb-container {
+        width: 960px; } }
+  #cb-holder #cb-text {
+    color: #333; }
+    @media only screen and (max-width: 767px) {
+      #cb-holder #cb-text {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 0 15px; } }
+    @media only screen and (min-width: 768px) {
+      #cb-holder #cb-text {
+        width: 770px;
+        float: left; } }
+    #cb-holder #cb-text p {
+      padding: 0;
+      margin: 0 0 1.2em;
+      font-size: 13px;
+      line-height: 21px; }
+      #cb-holder #cb-text p:last-of-type {
+        margin: 0; }
+    #cb-holder #cb-text a {
+      text-decoration: underline; }
+  @media only screen and (max-width: 767px) {
+    #cb-holder #cb-btn-holder {
+      width: 100%;
+      overflow: hidden; } }
+  @media only screen and (min-width: 768px) {
+    #cb-holder #cb-btn-holder {
+      width: 175px;
+      float: right; } }
+  @media only screen and (max-width: 767px) {
+    #cb-holder #cb-btn-holder #cb-btn-accept {
+      float: left; } }
+  @media only screen and (max-width: 767px) {
+    #cb-holder #cb-btn-holder #cb-btn-decline {
+      float: right; } }
+  #cb-holder #cb-btn-holder .cb-btn {
+    background: green;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 0 1.2em;
+    font-size: 13px;
+    line-height: 21px; }
+    #cb-holder #cb-btn-holder .cb-btn:last-of-type {
+      margin: 0;
+      background: black; }
+    #cb-holder #cb-btn-holder .cb-btn a {
+      color: #FFF;
+      text-decoration: none;
+      display: block;
+      padding: 12px 20px; }
+    @media only screen and (max-width: 767px) {
+      #cb-holder #cb-btn-holder .cb-btn {
+        width: 48%; } }
+
+.policy section {
+  margin-bottom: 30px; }
+
+/*# sourceMappingURL=cookie.css.map */

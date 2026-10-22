@@ -1,0 +1,11 @@
+node_modules
+.nuxt
+.output
+.env
+.DS_Store
+
+# Editor settings and generated output
+.idea/
+dist
+.env.*
+!.env.example

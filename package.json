@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-hyoung",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/nuxt.mjs dev",
+    "build": "node scripts/nuxt.mjs build",
+    "generate": "node scripts/nuxt.mjs generate",
+    "preview": "node scripts/nuxt.mjs preview",
+    "postinstall": "node scripts/nuxt.mjs prepare",
+    "typecheck": "node scripts/nuxt.mjs typecheck",
+    "seo:login": "npx --package=node@24 --package=@nuxtseo/cli nuxtseo login"
+  },
+  "dependencies": {
+    "nuxt": "~4.6.2",
+    "@nuxtjs/seo": "^6.0.1",
+    "vue": "^3.5.0",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "node": "^24.15.0",
+    "typescript": "^5.9.0",
+    "vue-tsc": "^3.0.0",
+    "@types/node": "^24.0.0"
+  }
+}

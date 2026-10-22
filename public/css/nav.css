@@ -1,0 +1,232 @@
+/************************************************************************************
+NAV
+*************************************************************************************/
+#nav-wrap {width:100%; background:none; position:relative; height:48px; margin-bottom:10px; z-index:999;}
+#nav-wrap a {text-decoration:none; outline: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);} /* removing default link style and highlighting */
+#nav-inner {height:auto;}
+#nav {height:inherit;}
+
+/* menu icon */
+#menu-icon {
+	display: none; /* hide menu icon initially */
+}
+
+#nav-inner {margin:0 auto; position:relative;}
+
+#nav li {
+	margin: 0;
+	padding: 0;
+}
+#nav li {
+	list-style: none;
+	float: left;
+	height:60px;
+	position:relative;
+}
+#nav li.active {}
+
+/* nav link */
+#nav a {
+	padding: 21px 15px 9px 15px;
+	height:30px;
+	display: block;
+	font-size:16px;
+	font-family:'segoeuisb', Arial, Helvetica, sans-serif;
+	color:#404040;
+}
+
+/* nav dropdown */
+#nav ul {
+	background: #343434;
+	position: absolute;
+	display: none; /* hide dropdown */
+	width: 200px;
+	z-index:9999;
+	margin:0;
+	top:48px;
+	left:0;
+	width:25%;
+
+	border-top:0;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2); 
+}
+
+/* fix for athletes dropdown */
+#nav #nav3 ul {left:auto;}
+
+#nav ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+#nav ul li:hover {background:#e74343; color:#222222;} /* cycling level hover state */
+#nav ul li.active {background:#e74343 !important;}
+#nav li:hover > ul {
+	display: block; /* show dropdown on hover */
+}
+#nav ul li a {border-color:transparent;}
+
+/* second tier e.g bikes frames */
+#nav li ul li ul {width:100%; min-height:100%; position:absolute; top:0px; left:100%; background: #f8f8f8;}
+#nav li ul li:hover > ul {display: block; /* show dropdown on hover */}
+#nav li ul li ul li {height:auto; width:100%; float:left;}
+#nav li ul li ul li a {font-size:13px; padding:0 15px; color:#333; font-family:'segoeui', Arial, Helvetica, sans-serif;}
+#nav ul li ul li.active, #nav ul li ul li:hover {background:#eaeaea !important;}
+#nav ul li ul li a {background:none;} /* clear backgrounds for nestled links */
+
+/* third tier e.g road mountain bmx */	
+#nav li ul li ul li ul {width:200%; position:absolute; top:0px; left:100%; background: #f1f1f1;}
+#nav li ul li ul li:hover > ul {display: block; /* show dropdown on hover */}
+#nav li ul li ul li ul li {width:50%;}
+#nav ul li ul li ul li.active, #nav ul li ul li ul li:hover {background:#e4e4e4 !important;}
+#nav li ul li ul li ul li a {color:#333; font-size:13px;}
+
+
+/************************************************************************************
+MOBILE
+*************************************************************************************/
+@media screen and (max-width: 600px) {
+	
+	#social-icon .tag {display:none;}
+
+	/* nav-wrap */
+	#nav-wrap {
+		position: relative;
+		overflow:visible;
+	}
+	
+	#nav li.active, #nav li:hover {background:#f1f1f1 !important;}
+	
+	/* menu icon */
+	#menu-icon {
+	color: #000;
+	position:absolute;
+	top:0;
+	left:0;
+	height:48px;
+	cursor: pointer;
+	display: block; /* show menu icon */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* disable android green box */
+	}
+	#menu-icon a {
+	position:relative;
+	display:inline-block;
+	width:auto;
+	height:36px;
+	border-bottom:solid 4px transparent;
+	font-size:18px;
+	color:#fff;
+	padding:8px 0 0 15px;
+	background:#7C7E81;
+	}
+	#menu-icon .icon {
+	background:#fff;
+	height:41px;
+	width:48px;
+	padding-top:7px;
+	text-align:center;
+	position:absolute;
+	top:0;
+	right:-48px;
+	}
+	#menu-icon .icon:hover{
+		background-color:#ddd;
+	}
+	#menu-icon.active .icon {
+		background-color:#ddd;
+	}
+		
+	/* main nav */
+	#nav {
+		clear: both;
+		position: absolute;
+		top: 48px;
+		left:0;
+		width: 160px;
+		z-index: 10000;
+		padding: 0;
+		background: #f8f8f8;
+		border: solid 1px #999;
+		border-top:0;
+		display: none; /* visibility will be toggled with jquery */
+	}
+	#nav li {
+		clear: both;
+		float: none;
+		margin:0; /* remove margins from nav */
+		border-right:none;
+		height:auto;
+	}
+	#nav a, 
+	#nav ul a {
+		font: inherit;
+		background: none;
+		display: block;
+		width:auto;
+		padding: 10px;
+		color: #666;
+		border: none;
+	}
+	#nav a:hover, 
+	#nav ul a:hover {
+		background: none;
+		color: #000;
+	}
+	
+	/* dropdown */
+	#nav ul {
+		width: auto;
+		position: static;
+		display: none;
+		border: none;
+		background: inherit;
+	}
+	#nav ul li {
+		margin: 3px 0 3px 15px;
+	}
+	
+	/* sub dropdowns */
+	#nav li:hover > ul {display:none;} /* overrides show dropdown on hover*/
+
+}
+
+/* TABLET/NETBOOK */
+@media only screen and (min-width: 600px) {
+/* ensure #nav is visible on desktop version */
+#nav {display: inline-block !important; margin-left:20px; margin-bottom:0;}
+#nav ul {width:50%;}
+#nav li ul li ul {width:100%;}
+#nav li ul li ul li:hover > ul {display: none; /* dont show third level dropdown on hover */}
+
+#nav li.active a:hover:after {
+    content: "";
+    display: block;
+    border: 18px solid transparent;
+    border-top: 12px solid #7C7E81;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -18px;
+}
+
+#nav li:first-child a:first-child{padding-left:0;}
+#nav #nav1 a:after {left:40% !important;}
+}
+
+@media only screen and (min-width: 768px) { 
+
+}
+
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media only screen and (min-width: 1024px) { 
+
+	#social-icon .tag {display:block;}
+	#nav-inner {width:1024px;}
+	#nav {width:900px !important; margin-left:0;}
+	#nav ul {width:25%;}
+	#nav li ul li ul {width:100%;}
+	#nav li ul li ul li:hover > ul {display: block; /* dont show third level dropdown on hover */}
+
+}
