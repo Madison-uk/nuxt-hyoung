@@ -5,7 +5,7 @@ Static migration of the Laravel H. Young website. All 14 public Laravel routes r
 ## Run locally
 
 ```sh
-cd /Users/susanf/Sites/nuxt-hyoung
+cd /nuxt-hyoung
 npm run dev
 ```
 
